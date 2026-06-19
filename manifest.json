@@ -3,8 +3,21 @@
 	"description": "Base Level Extension",
 	"version": "1.0",
 	"manifest_version": 3,
+	"icons": {
+		"16": "src/assets/icon-16.png"
+	},
+	"permissions": ["tabs"],
 	"action": {
-		"default_popup": "src/hello.html",
-		"default_icon": "src/assets/hello_extensions.png"
-	}
+		"default_icon": "src/assets/icon-16.png"
+	},
+	"background": {
+		"service_worker": "src/scripts/background.js"
+	},
+	"content_scripts": [
+		{
+			"js": ["src/scripts/content.js"],
+			"css": ["src/styles/partnership.css"],
+			"matches": ["https://tanstack.com/*"]
+		}
+	]
 }

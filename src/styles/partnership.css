@@ -1,0 +1,7 @@
+.w-full.shrink-0.md\:sticky.hidden.md\:block {
+	display: none;
+}
+
+.w-full.shrink-0.md\:sticky.hidden.md\:block[data-visibility="true"] {
+	display: block;
+}
